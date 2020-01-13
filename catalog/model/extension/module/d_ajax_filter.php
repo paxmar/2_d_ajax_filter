@@ -328,7 +328,7 @@ class ModelExtensionModuleDAjaxFilter extends Model
             $this->db->query("INSERT INTO `".DB_PREFIX."af_translit` SET 
                 `type` = '".$type."', 
                 `group_id` = '".$group_id."', 
-                `value` = '".$value."', 
+                `value` = '".(int)$value."', 
                 `language_id` = '".(int)$this->config->get('config_language_id')."',
                 `text` = '".$this->db->escape($text)."'");
         }
